@@ -117,57 +117,8 @@ export function Contact() {
             className="lg:w-1/2"
           >
             <div className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-[0_20px_50px_rgba(15,23,42,0.1)] border border-slate-50">
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-navy uppercase tracking-widest ml-1">Name</label>
-                    <input
-                      type="text"
-                      placeholder="Ihr Name"
-                      className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 outline-none focus:border-gold/50 focus:ring-4 focus:ring-gold/5 transition-all"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-navy uppercase tracking-widest ml-1">E-Mail</label>
-                    <input
-                      type="email"
-                      placeholder="Ihre E-Mail Adresse"
-                      className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 outline-none focus:border-gold/50 focus:ring-4 focus:ring-gold/5 transition-all"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-navy uppercase tracking-widest ml-1">Betreff</label>
-                  <select className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 outline-none focus:border-gold/50 focus:ring-4 focus:ring-gold/5 transition-all appearance-none">
-                    <option>Badsanierung</option>
-                    <option>Fliesenarbeiten</option>
-                    <option>Komplettrenovierung</option>
-                    <option>Anderes Anliegen</option>
-                  </select>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-navy uppercase tracking-widest ml-1">Nachricht</label>
-                  <textarea
-                    rows={5}
-                    placeholder="Beschreiben Sie Ihr Projekt..."
-                    className="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 outline-none focus:border-gold/50 focus:ring-4 focus:ring-gold/5 transition-all resize-none"
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-navy text-white font-bold py-5 rounded-2xl hover:bg-slate-800 transition-all premium-shadow flex items-center justify-center gap-2 group text-lg"
-                >
-                  <span>Anfrage absenden</span>
-                  <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                </button>
-                
-                <p className="text-[12px] text-slate-400 text-center px-4">
-                  Mit dem Absenden der Anfrage erklären Sie sich mit der Verarbeitung Ihrer Daten gemäß unserer Datenschutzerklärung einverstanden.
-                </p>
-              </form>
+              <iframe   src="https://api.leadconnectorhq.com/widget/form/XY0q5vKEOkysYi5SjGYw"   style={{width:"100%", height:"673px", border:"none", borderRadius:"8px"}}   title="Form 0" />
+               
             </div>
           </motion.div>
         </div>
