@@ -116,17 +116,19 @@ export function EtheralShadow({
                 style={{
                     position: "absolute",
                     inset: -displacementScale,
-                    filter: animationEnabled ? `url(#${id}) blur(4px)` : "none"
+                    filter: animationEnabled ? `url(#${id}) blur(12px)` : "none",
+                    zIndex: 5,
+                    pointerEvents: "none"
                 }}
             >
                 {animationEnabled && (
-                    <svg style={{ position: "absolute", width: 0, height: 0 }}>
+                    <svg style={{ position: "absolute", width: "1px", height: "1px", opacity: 0, pointerEvents: "none" }}>
                         <defs>
-                            <filter id={id}>
+                            <filter id={id} colorInterpolationFilters="sRGB">
                                 <feTurbulence
                                     result="undulation"
                                     numOctaves="2"
-                                    baseFrequency={`${mapRange(animation.scale, 0, 100, 0.001, 0.0005)},${mapRange(animation.scale, 0, 100, 0.004, 0.002)}`}
+                                    baseFrequency={`${mapRange(animation.scale, 0, 100, 0.01, 0.005)},${mapRange(animation.scale, 0, 100, 0.04, 0.02)}`}
                                     seed="0"
                                     type="turbulence"
                                 />
@@ -135,9 +137,10 @@ export function EtheralShadow({
                                     in="undulation"
                                     type="hueRotate"
                                     values="180"
+                                    result="animated_undulation"
                                 />
                                 <feColorMatrix
-                                    in="dist"
+                                    in="animated_undulation"
                                     result="circulation"
                                     type="matrix"
                                     values="4 0 0 0 1  4 0 0 0 1  4 0 0 0 1  1 0 0 0 0"
@@ -146,10 +149,10 @@ export function EtheralShadow({
                                     in="SourceGraphic"
                                     in2="circulation"
                                     scale={displacementScale}
-                                    result="dist"
+                                    result="dist1"
                                 />
                                 <feDisplacementMap
-                                    in="dist"
+                                    in="dist1"
                                     in2="undulation"
                                     scale={displacementScale}
                                     result="output"
@@ -162,9 +165,13 @@ export function EtheralShadow({
                     style={{
                         backgroundColor: color,
                         maskImage: `url('https://framerusercontent.com/images/ceBGguIpUU8luwByxuQz79t7To.png')`,
+                        WebkitMaskImage: `url('https://framerusercontent.com/images/ceBGguIpUU8luwByxuQz79t7To.png')`,
                         maskSize: sizing === "stretch" ? "100% 100%" : "cover",
+                        WebkitMaskSize: sizing === "stretch" ? "100% 100%" : "cover",
                         maskRepeat: "no-repeat",
+                        WebkitMaskRepeat: "no-repeat",
                         maskPosition: "center",
+                        WebkitMaskPosition: "center",
                         width: "100%",
                         height: "100%"
                     }}
@@ -191,7 +198,8 @@ export function EtheralShadow({
                         backgroundSize: noise.scale * 200,
                         backgroundRepeat: "repeat",
                         opacity: noise.opacity / 2,
-                        pointerEvents: "none"
+                        pointerEvents: "none",
+                        zIndex: 15
                     }}
                 />
             )}

@@ -1,42 +1,49 @@
 import { motion } from "motion/react";
 import { Bath, LayoutGrid, Hammer, Paintbrush, Trash2, Home, CheckCircle2, Wrench } from "lucide-react";
 
+import service1Img from "@/src/assets/images/regenerated_image_1778865207470.png";
+import service2Img from "@/src/assets/images/regenerated_image_1778846015125.png";
+import service3Img from "@/src/assets/images/regenerated_image_1778846012942.png";
+import service4Img from "@/src/assets/images/regenerated_image_1778846011151.png";
+import service5Img from "@/src/assets/images/regenerated_image_1778846004833.png";
+import service6Img from "@/src/assets/images/regenerated_image_1778846009219.png";
+
 const services = [
   {
     title: "Badsanierung",
     description: "Komplette Modernisierung Ihres Badezimmers aus einer Hand – von der Planung bis zur Fertigstellung.",
     icon: Bath,
-    image: "/src/assets/images/regenerated_image_1778846016608.jpg"
+    image: service1Img
   },
   {
     title: "Wand & Bodenfliesen",
     description: "Präzise Verlegung von Fliesen in allen Formaten, von Mosaik bis hin zu großformatigen Platten.",
     icon: LayoutGrid,
-    image: "/src/assets/images/regenerated_image_1778846015125.png"
+    image: service2Img
   },
   {
     title: "Trockenbau",
     description: "Moderne Raumgestaltung und Funktionswände für optimale Raumnutzung und Ästhetik.",
     icon: Home,
-    image: "/src/assets/images/regenerated_image_1778846012942.png"
+    image: service3Img
   },
   {
     title: "Malerarbeiten",
     description: "Fachgerechte Anstriche und kreative Wandgestaltungen für ein harmonisches Gesamtbild.",
     icon: Paintbrush,
-    image: "/src/assets/images/regenerated_image_1778846011151.png"
+    image: service4Img
   },
   {
     title: "Klempnerarbeiten",
     description: "Installation von Wasser- und Abwasserleitungen sowie fachgerechte Montage Ihrer Sanitäranlagen.",
     icon: Wrench,
-    image: "/src/assets/images/regenerated_image_1778846004833.png"
+    image: service5Img
   },
   {
     title: "Innenausbau",
     description: "Ganzheitliche Renovierung Ihrer Wohnräume für mehr Lebensqualität und Wertsteigerung.",
     icon: Hammer,
-    image: "/src/assets/images/regenerated_image_1778846009219.png"
+    image: service6Img
   }
 ];
 

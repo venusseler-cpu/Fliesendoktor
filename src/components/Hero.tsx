@@ -6,20 +6,24 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background with overlay */}
-      <div 
-        className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{ 
-          backgroundImage: 'url("https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=2000&auto=format&fit=crop")',
-        }}
-      >
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <EtheralShadow 
-          color="rgba(15, 23, 42, 0.6)" // Navy-ish color to match theme
+          color="rgba(15, 23, 42, 0.4)" 
           animation={{ scale: 100, speed: 90 }}
-          noise={{ opacity: 0.5, scale: 1.2 }}
+          noise={{ opacity: 0.3, scale: 1.2 }}
           sizing="fill"
           className="absolute inset-0"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/30 via-transparent to-transparent"></div>
+        >
+          <div 
+            className="absolute inset-0 bg-cover bg-center opacity-85"
+            style={{ 
+              backgroundImage: 'url("https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=2000&auto=format&fit=crop")',
+            }}
+          >
+            <div className="absolute inset-0 bg-navy/40"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-navy/60 via-navy/20 to-transparent"></div>
+          </div>
+        </EtheralShadow>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">

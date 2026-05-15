@@ -1,48 +1,42 @@
 import { motion } from "motion/react";
 import { Maximize2 } from "lucide-react";
-import project1Image from "@/src/assets/images/regenerated_image_1778843593634.png";
-import project2Image from "@/src/assets/images/regenerated_image_1778843729097.png";
-import project3Image from "@/src/assets/images/regenerated_image_1778843764456.png";
-import project4Image from "@/src/assets/images/regenerated_image_1778843969641.png";
-import project5Image from "@/src/assets/images/regenerated_image_1778843970975.png";
-import project6Image from "@/src/assets/images/regenerated_image_1778843971826.png";
 
 export function Gallery() {
   const projects = [
     {
       title: "Luxus Bad Modernisierung",
       category: "Badsanierung",
-      image: project1Image,
+      image: "/images/regenerated_image_1778843593634.png",
       badge: "Nachher"
     },
     {
       title: "Großformat Fliesen Verlegung",
       category: "Fliesenarbeiten",
-      image: project2Image,
+      image: "/images/regenerated_image_1778843729097.png",
       badge: "Projekt"
     },
     {
       title: "Design Dusche & Armaturen",
       category: "Badsanierung",
-      image: project3Image,
+      image: "/images/regenerated_image_1778843764456.png",
       badge: "Premium"
     },
     {
       title: "Präzisions-Kanten Abschluss",
       category: "Meisterarbeit",
-      image: project4Image,
+      image: "/images/regenerated_image_1778843969641.png",
       badge: "Detail"
     },
     {
       title: "Modernes Gäste-WC",
       category: "Badplanung",
-      image: project5Image,
+      image: "/images/regenerated_image_1778843970975.png",
       badge: "Projekt"
     },
     {
       title: "Wellness-Bereich Privat",
       category: "Exklusivbau",
-      image: project6Image,
+      image: "/images/regenerated_image_1778843971826.png",
       badge: "Nachher"
     }
   ];
